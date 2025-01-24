@@ -2,6 +2,9 @@
 #include <memory>
 #include <iostream>
 
+#include <memory>
+#include <iostream>
+
 class SimpleClass {
 public:
     SimpleClass(int value) : data(new int(value)) {
@@ -45,7 +48,8 @@ private:
 };
 
 void randomFunc(SimpleClass hello){
-    // This should just do a deep copy
+    // This should just do a deep copy because of the param
+    // And then call the destructor
 }
 
 void randomFunc2(SimpleClass &hello){
@@ -54,6 +58,7 @@ void randomFunc2(SimpleClass &hello){
 
     // Random is freed here.
 }
+
 
 
 int main() {
@@ -65,6 +70,10 @@ randomFunc2(hello);
 
 // This is safe
 std::cout << "Data of hello: " << hello.getData() << std::endl; 
+
+
+return 0;
+}
 
 
 return 0;
