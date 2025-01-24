@@ -64,7 +64,7 @@ int main() {
     randomOne(first);
     std::cout << "Value is " << first.getData() << std::endl; // 3 
     randomThree(&first);
-    std::cout << "Value is " << first.getData() << std::endl;
+    std::cout << "Value is " << first.getData() << std::endl; // 59
 
     return 0;
 }
